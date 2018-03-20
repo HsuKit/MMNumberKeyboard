@@ -663,12 +663,27 @@ NS_INLINE CGRect MMButtonRectMake(CGRect rect, CGRect contentRect, BOOL usesRoun
         MMNumberKeyboardButton key = utilityButtonKeys[idx];
         
         UIButton *button = buttonDictionary[@(key)];
-        CGRect rect = (CGRect){ .size = utilitySize };
+	    
+	           if (idx == 0) {
+           CGRect rect = (CGRect){ .size = numberSize };
+           rect.origin.x = columnWidth * 3.0f;
+           rect.origin.y = 0;
+           [button setFrame:MMButtonRectMake(rect, contentRect, usesRoundedButtons)];
+           [button setBackgroundColor:[UIColor whiteColor]];
+       }else{
+           CGRect rect = (CGRect){ .size = utilitySize };
+           rect.origin.x = columnWidth * 3.0f;
+           rect.origin.y = numberSize.height;
+           [button setFrame:MMButtonRectMake(rect, contentRect, usesRoundedButtons)];
+           [button setBackgroundColor:[UIColor colorWithRed:241.0/255.0 green:141.0/255.0 blue:0 alpha:1.0]];
+           [button setTitleColor:[UIColor whiteColor] forState:0];
+       }
+//         CGRect rect = (CGRect){ .size = utilitySize };
         
-        rect.origin.x = columnWidth * 3.0f;
-        rect.origin.y = idx * utilitySize.height;
+//         rect.origin.x = columnWidth * 3.0f;
+//         rect.origin.y = idx * utilitySize.height;
         
-        [button setFrame:MMButtonRectMake(rect, contentRect, usesRoundedButtons)];
+//         [button setFrame:MMButtonRectMake(rect, contentRect, usesRoundedButtons)];
     }
     
     // Layout separators:
