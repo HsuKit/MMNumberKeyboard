@@ -657,7 +657,7 @@ NS_INLINE CGRect MMButtonRectMake(CGRect rect, CGRect contentRect, BOOL usesRoun
     
     // Layout utility column.
     const int utilityButtonKeys[2] = { MMNumberKeyboardButtonBackspace, MMNumberKeyboardButtonDone };
-    const CGSize utilitySize = CGSizeMake(columnWidth, rowHeight * 2.0f);
+    const CGSize utilitySize = CGSizeMake(columnWidth, rowHeight * 3.0f);
     
     for (NSInteger idx = 0; idx < sizeof(utilityButtonKeys) / sizeof(int); idx++) {
         MMNumberKeyboardButton key = utilityButtonKeys[idx];
