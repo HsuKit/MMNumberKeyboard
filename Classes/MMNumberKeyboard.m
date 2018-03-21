@@ -152,7 +152,7 @@ static const CGFloat MMNumberKeyboardPadSpacing = 8.0f;
     
     UIImage *backspaceImage = [self.class _keyboardImageNamed:@"MMNumberKeyboardDeleteKey.png"];
     
-    UIButton *backspaceButton = [MMKeyboardButton keyboardButtonWithStyle:MMNumberKeyboardButtonStyleGray];
+    UIButton *backspaceButton = [MMKeyboardButton keyboardButtonWithStyle:MMNumberKeyboardButtonStyleWhite];
     [backspaceButton setImage:[backspaceImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     
     [(MMKeyboardButton *)backspaceButton addTarget:self action:@selector(_backspaceRepeat:) forContinuousPressWithTimeInterval:0.15f];
