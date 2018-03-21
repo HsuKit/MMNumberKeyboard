@@ -69,7 +69,7 @@
         }
         highlightedFillColor = [UIColor whiteColor];
     } else if (style == MMNumberKeyboardButtonStyleDone) {
-        fillColor = [UIColor colorWithRed:0 green:0.479f blue:1 alpha:1];
+        fillColor = [UIColor colorWithRed:241.0/255.0 green:141.0/255.0 blue:0 alpha:1.0];
         highlightedFillColor = [UIColor whiteColor];
     }
     
